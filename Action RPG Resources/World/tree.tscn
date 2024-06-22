@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://boq1qcddgnbbu"]
+
+[ext_resource type="Texture2D" uid="uid://bpuq7ov5b303f" path="res://Action RPG Resources/World/img/Tree.png" id="1_syum8"]
+[ext_resource type="Texture2D" uid="uid://cak0yjclgkbie" path="res://Action RPG Resources/Shadows/LargeShadow.png" id="2_mtt1i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gha35"]
+height = 28.0
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_syum8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gha35")
+disabled = true
+
+[node name="shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 69)
+scale = Vector2(3, 3)
+texture = ExtResource("2_mtt1i")

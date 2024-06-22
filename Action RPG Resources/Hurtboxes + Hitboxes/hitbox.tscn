@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0dutrntiufy0"]
+
+[ext_resource type="Script" path="res://Action RPG Resources/Hurtboxes + Hitboxes/hitbox.gd" id="1_kmuh3"]
+
+[node name="Hitbox" type="Area2D"]
+script = ExtResource("1_kmuh3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+disabled = true

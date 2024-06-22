@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt5c4r3tosjns"]
+
+[ext_resource type="Script" path="res://Action RPG Resources/Enemies/player_detection_zone.gd" id="1_8k7cc"]
+
+[node name="PlayerDetectionZone" type="Area2D"]
+visibility_layer = 0
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_8k7cc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

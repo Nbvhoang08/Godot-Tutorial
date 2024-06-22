@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://du4qco07d28y0"]
+
+[ext_resource type="Script" path="res://Action RPG Resources/Player/Player.gd" id="1_kw725"]
+[ext_resource type="Texture2D" uid="uid://dabal5j86hmqw" path="res://Action RPG Resources/Player/Player.png" id="2_v6mfc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oibo3"]
+radius = 8.0
+height = 22.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(435, 79)
+script = ExtResource("1_kw725")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_v6mfc")
+hframes = 62
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 17)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_oibo3")

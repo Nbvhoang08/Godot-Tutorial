@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://v1txykoo763p"]
+
+[ext_resource type="Script" path="res://Action RPG Resources/UI/hearth_ui.gd" id="1_fj2xs"]
+[ext_resource type="Texture2D" uid="uid://c57bv4inb22yd" path="res://Action RPG Resources/UI/HeartUIEmpty.png" id="2_74xxp"]
+[ext_resource type="Texture2D" uid="uid://ccskfjhq808rf" path="res://Action RPG Resources/UI/HeartUIFull.png" id="3_qms4i"]
+
+[node name="HearthUI" type="Node2D"]
+position = Vector2(19, 11)
+script = ExtResource("1_fj2xs")
+
+[node name="HeartUIEmpty" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 64.0
+offset_bottom = 13.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_74xxp")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="HeartUiFull" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 63.0
+offset_bottom = 14.0
+scale = Vector2(3, 3)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_qms4i")
+expand_mode = 3
+stretch_mode = 1

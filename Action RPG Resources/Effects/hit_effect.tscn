@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl131qvcjtu2g"]
+
+[ext_resource type="Texture2D" uid="uid://yhgu3qngtxg8" path="res://Action RPG Resources/Effects/HitEffect.png" id="1_irpg3"]
+[ext_resource type="Script" path="res://Action RPG Resources/Effects/effect.gd" id="2_u76dt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jfrh"]
+atlas = ExtResource("1_irpg3")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0y6d"]
+atlas = ExtResource("1_irpg3")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o6e4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jfrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0y6d")
+}],
+"loop": false,
+"name": &"Animate",
+"speed": 5.0
+}]
+
+[node name="HitEffect" type="AnimatedSprite2D"]
+light_mask = 4
+visibility_layer = 4
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_o6e4e")
+animation = &"Animate"
+autoplay = "Animate"
+frame = 1
+frame_progress = 1.0
+offset = Vector2(0, -8)
+script = ExtResource("2_u76dt")
